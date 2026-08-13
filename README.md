@@ -8,6 +8,23 @@ Unlike traditional keyword-based career tools, PathForge combines NLP, semantic 
 
 ---
 
+## 🚀 Live Demo
+
+[Open PathForge](https://pathforge-gc8cmfvfbxstcwb2z4ksbo.streamlit.app/)
+
+## Demo
+
+PathForge analyzes a resume, retrieves relevant technology roles, identifies skill gaps, evaluates career resilience, and generates a personalized learning roadmap.
+
+### Screenshots
+
+![Dashboard](assets/dashboard.png)
+![Skills](assets/skills.png)
+![Job Matches](assets/job_matches.png)
+![Career Resilience](assets/career_resilience.png)
+![Recommendations](assets/recommendations.png)
+![Learning Roadmap](assets/roadmap.png)
+
 ## Problem Statement
 
 The rapid adoption of Artificial Intelligence is changing the technology workforce and reshaping the skills demanded by industry. Traditional career platforms mainly rely on keyword-based job matching and often overlook critical skill gaps, market demand, skill transferability, and the potential impact of AI on different capabilities.
