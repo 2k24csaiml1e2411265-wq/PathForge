@@ -45,10 +45,6 @@ PathForge addresses this problem by helping users understand:
 - **Interactive Dashboard** — Six-section Streamlit interface for exploring results.
 
 ---
-## Live Demo
-
-🚀 [Open PathForge](https://pathforge-gc8cmfvfbxstcwb2z4ksbo.streamlit.app/
-)
 
 ## Architecture
 
