@@ -76,3 +76,244 @@ Gemini / Fallback Narrative
 Personalized Learning Roadmap
        ↓
 Streamlit Dashboard
+```
+
+Detailed architecture: `docs/architecture.md`
+
+---
+
+## Technology Stack
+
+**Languages & Data**
+- Python
+- Pandas
+- NumPy
+
+**Machine Learning & NLP**
+- Scikit-learn
+- spaCy
+- Sentence Transformers
+- FAISS
+
+**Generative AI**
+- Google Gemini API
+
+**Application**
+- Streamlit
+- Plotly
+
+**Testing**
+- Pytest
+
+**Development**
+- Git
+- GitHub
+
+---
+
+## Project Structure
+
+```text
+PathForge/
+├── app.py
+├── README.md
+├── SETUP.md
+├── requirements.txt
+├── .env.example
+├── .streamlit/
+│   └── config.toml
+│
+├── data/
+│   ├── jobs.csv
+│   ├── skills.json
+│   ├── ai_exposure_rules.json
+│   ├── generate_sample_jobs.py
+│   └── ingest_real_dataset.py
+│
+├── models/
+├── notebooks/
+├── src/
+├── tests/
+├── sample_data/
+├── assets/
+└── docs/
+```
+
+---
+
+## Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/2k24csaiml1e2411265-wq/PathForge.git
+cd PathForge
+```
+
+### 2. Create a virtual environment
+
+**Windows**
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+**Linux / macOS**
+
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Install the spaCy model
+
+```bash
+python -m spacy download en_core_web_sm
+```
+
+### 5. Start the application
+
+```bash
+streamlit run app.py
+```
+
+---
+
+## Dataset
+
+The repository includes an **80-row synthetic demonstration dataset** containing technology job postings.
+
+The sample dataset is intentionally included for reproducibility and demonstration. It is **not** a scraped or licensed 6,520-row production dataset.
+
+To use a larger authorized dataset, use `data/ingest_real_dataset.py`.
+
+The sample dataset can be regenerated using `data/generate_sample_jobs.py`.
+
+---
+
+## Gemini API
+
+Gemini is an optional intelligence layer.
+
+Create a `.env` file from `.env.example`:
+
+```env
+GEMINI_API_KEY=your_api_key_here
+```
+
+Without an API key, PathForge automatically uses its local fallback generator for career summaries and roadmaps.
+
+The core skill extraction, semantic search, skill-gap analysis, and resilience scoring do not depend on Gemini.
+
+> **Security:** Never commit `.env` or any real API key to GitHub.
+
+---
+
+## Offline Support
+
+PathForge includes fallbacks for environments with limited connectivity:
+
+- Sentence Transformers → TF-IDF fallback
+- FAISS → Scikit-learn Nearest Neighbors fallback
+- Gemini → Local template-based recommendation fallback
+
+---
+
+## Example Workflow
+
+1. Upload a resume or use the sample resume.
+2. Select a target role or allow automatic matching.
+3. Click **Analyze Profile**.
+4. Review extracted skills.
+5. Explore matching job opportunities.
+6. Review missing and critical skills.
+7. Check market demand and career resilience.
+8. Review recommended skills and projects.
+9. Generate a personalized learning roadmap.
+
+---
+
+## Results
+
+PathForge provides:
+
+- Current skill profile
+- Skill coverage percentage
+- Relevant job matches
+- Missing and critical skills
+- Market demand signals
+- Skill transferability
+- AI exposure classification
+- Career resilience indicator
+- Prioritized recommendations
+- Personalized learning roadmap
+
+### Application Screenshots
+
+#### Dashboard
+![PathForge Dashboard](assets/dashboard.png)
+
+#### Skills Analysis
+![Skills Analysis](assets/skills.png)
+
+#### Job Matches
+![Job Matches](assets/job_matches.png)
+
+#### Career Resilience
+![Career Resilience](assets/career_resilience.png)
+
+#### Recommendations
+![Recommendations](assets/recommendations.png)
+
+#### Learning Roadmap
+![Learning Roadmap](assets/roadmap.png)
+
+---
+
+## Evaluation
+
+Run the automated tests:
+
+```bash
+python -m pytest tests -v
+```
+
+The current automated suite contains **22 passing tests** covering resilience scoring, semantic search, skill extraction/normalization, and skill-gap analysis.
+
+For the evaluation workflow, see `docs/evaluation.md`.
+
+---
+
+## Limitations
+
+- The included job dataset is synthetic and limited to 80 postings.
+- Semantic search quality depends on the selected embedding model and available data.
+- TF-IDF fallback is simpler than transformer-based semantic embeddings.
+- AI-exposure classification is a heuristic and is not a validated economic forecast.
+- Career resilience scores are analytical indicators, not guarantees of future employment outcomes.
+- Gemini narrative quality depends on API availability and model behavior.
+
+---
+
+## Future Scope
+
+- Integrate a larger authorized real-world job dataset.
+- Add GitHub profile and project analysis.
+- Expand the skill ontology and role taxonomy.
+- Build a knowledge graph connecting skills, roles, projects, and learning resources.
+- Add authentication and persistent candidate profiles.
+- Evaluate and calibrate resilience-score weights using real career outcome data.
+- Deploy the platform as a scalable cloud application.
+
+---
+
+## License
+
+MIT License — see `LICENSE` for details.
