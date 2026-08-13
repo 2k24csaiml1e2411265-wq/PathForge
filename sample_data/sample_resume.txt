@@ -1,0 +1,37 @@
+Yash Sharma
+Final-Year B.Tech Student — Artificial Intelligence & Machine Learning
+
+SUMMARY
+Final-year AI/ML engineering student with hands-on experience building
+end-to-end machine learning and NLP projects. Comfortable across the
+stack — from data preprocessing to model deployment.
+
+TECHNICAL SKILLS
+Programming Languages: Python, SQL, JavaScript
+ML/AI: Machine Learning, Deep Learning, Natural Language Processing,
+       scikit-learn, TensorFlow, Pandas, NumPy, spaCy
+Frameworks: Flask, React
+Databases: MySQL, MongoDB
+DevOps/Cloud: Git, Docker, basic AWS
+Soft Skills: Communication, Teamwork, Problem Solving
+
+PROJECTS
+Resume Skill Extractor — Built an NLP pipeline using spaCy and a rule-based
+skill dictionary to extract technical skills from resumes with over 90%
+precision on a manually labeled test set.
+
+Movie Recommendation System — Implemented a content-based recommender using
+TF-IDF vectorization and cosine similarity over a public movie dataset.
+
+Student Result Portal — Full-stack web application built with Flask and
+MySQL, including authentication and a REST API for result lookups.
+
+EXPERIENCE
+AI/ML Intern (Summer) — Contributed to a data-cleaning and feature
+engineering pipeline for a churn-prediction project using Python and
+Pandas; presented findings to the engineering team.
+
+EDUCATION
+B.Tech in Artificial Intelligence & Machine Learning (2024 - 2028)
+Relevant coursework: Data Structures, Machine Learning, Statistics,
+Database Management Systems.

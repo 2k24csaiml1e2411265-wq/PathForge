@@ -1,0 +1,64 @@
+{
+  "_comment": "Configurable heuristic used by src/ai_exposure.py. This is an ANALYTICAL INDICATOR, not a validated prediction of job displacement. Edit freely to reflect your own judgement or newer research.",
+
+  "categories": {
+    "ai_substitutable": {
+      "label": "AI-Substitutable",
+      "score_range": [0, 40],
+      "explanation": "Tasks that current generative-AI / automation tools can already perform end-to-end with limited human review."
+    },
+    "ai_augmented": {
+      "label": "AI-Augmented",
+      "score_range": [41, 70],
+      "explanation": "Tasks where AI tools significantly speed up the work, but a human is still needed to direct, verify, and integrate the output."
+    },
+    "ai_complementary": {
+      "label": "AI-Complementary",
+      "score_range": [71, 100],
+      "explanation": "Tasks that rely on judgement, novel problem framing, human relationships, physical presence, or accountability that AI cannot presently substitute for."
+    }
+  },
+
+  "skill_overrides": {
+    "data entry": "ai_substitutable",
+    "basic sql": "ai_substitutable",
+    "manual testing": "ai_substitutable",
+    "html": "ai_substitutable",
+    "css": "ai_substitutable",
+
+    "python": "ai_augmented",
+    "java": "ai_augmented",
+    "javascript": "ai_augmented",
+    "sql": "ai_augmented",
+    "react": "ai_augmented",
+    "django": "ai_augmented",
+    "flask": "ai_augmented",
+    "docker": "ai_augmented",
+    "rest api": "ai_augmented",
+    "data analysis": "ai_augmented",
+    "machine learning": "ai_augmented",
+    "deep learning": "ai_augmented",
+    "tensorflow": "ai_augmented",
+    "pytorch": "ai_augmented",
+    "computer vision": "ai_augmented",
+    "natural language processing": "ai_augmented",
+    "cloud computing": "ai_augmented",
+    "aws": "ai_augmented",
+    "azure": "ai_augmented",
+    "gcp": "ai_augmented",
+
+    "leadership": "ai_complementary",
+    "teamwork": "ai_complementary",
+    "communication": "ai_complementary",
+    "problem solving": "ai_complementary",
+    "presentation": "ai_complementary",
+    "time management": "ai_complementary",
+    "system design": "ai_complementary",
+    "kubernetes": "ai_complementary",
+    "llm": "ai_complementary",
+    "generative ai": "ai_complementary"
+  },
+
+  "default_category": "ai_augmented",
+  "default_score": 55
+}
